@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Services | Skilled Migration Services</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body {
+      background-color: #121212;
+      color: #fff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .card {
+      background-color: #1e1e1e;
+      border: none;
+      transition: transform 0.3s ease;
+      height: 100%;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 15px rgba(255, 165, 0, 0.3);
+    }
+
+    .card-title {
+      color: orange;
+      font-weight: bold;
+    }
+
+    .card-text{
+        color: white;
+    }
+
+    .btn-orange {
+      background-color: orange;
+      color: black;
+      font-weight: bold;
+    }
+
+    .btn-orange:hover {
+      background-color: #ffaa00;
+      color: #000;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #0d0d0d;
+      color: #aaa;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container py-5">
+    <h1 class="section-title text-warning">Our Services</h1>
+    <div class="row g-4">
+      <!-- Service 1 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card p-3">
+          <div class="card-body">
+            <h5 class="card-title">Migration Services</h5>
+            <p class="card-text">
+              We provide professional assistance with Australian visas including skilled migration, partner, parent, student and more.
+            </p>
+            <a href="#" class="btn btn-orange">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <!-- Service 2 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card p-3">
+          <div class="card-body">
+            <h5 class="card-title">Skill Assessment</h5>
+            <p class="card-text">
+              Get guidance and help to complete your skill assessment with authorized assessing bodies for migration.
+            </p>
+            <a href="#" class="btn btn-orange">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <!-- Service 3 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card p-3">
+          <div class="card-body">
+            <h5 class="card-title">Student Visa Support</h5>
+            <p class="card-text">
+              Comprehensive support for obtaining your student visa, school enrollment, and compliance assistance.
+            </p>
+            <a href="#" class="btn btn-orange">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <!-- Service 4 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card p-3">
+          <div class="card-body">
+            <h5 class="card-title">Partner & Family Visas</h5>
+            <p class="card-text">
+              We help bring your loved ones to Australia through partner, spouse, and parent visa services.
+            </p>
+            <a href="#" class="btn btn-orange">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <!-- Service 5 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card p-3">
+          <div class="card-body">
+            <h5 class="card-title">Visa Refusals & Appeals</h5>
+            <p class="card-text">
+              Facing a visa refusal or cancellation? We can help you appeal or reapply with the correct legal support.
+            </p>
+            <a href="#" class="btn btn-orange">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <!-- Service 6 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card p-3">
+          <div class="card-body">
+            <h5 class="card-title">Business & Investor Visas</h5>
+            <p class="card-text">
+              Support for business owners and investors seeking permanent residency through investment pathways.
+            </p>
+            <a href="#" class="btn btn-orange">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Why Choose Us Section -->
+<section class="py-5 bg-dark text-white">
+  <div class="container text-center">
+    <h2 class="mb-4 text-warning">Why You Should Choose Us</h2>
+    <div class="row g-4 justify-content-center">
+      <!-- Card 1 -->
+      <div class="col-6 col-md-3">
+        <div class="counter-box p-4 bg-black rounded-3">
+          <h3 class="counter text-orange" data-target="2000">0</h3>
+          <p>Thousands of<br>Successful Applications</p>
+        </div>
+      </div>
+      <!-- Card 2 -->
+      <div class="col-6 col-md-3">
+        <div class="counter-box p-4 bg-black rounded-3">
+          <h3 class="counter text-orange" data-target="100">0%</h3>
+          <p>Personalised<br>Support</p>
+        </div>
+      </div>
+      <!-- Card 3 -->
+      <div class="col-6 col-md-3">
+        <div class="counter-box p-4 bg-black rounded-3">
+          <h3 class="counter text-orange" data-target="17">0+</h3>
+          <p>Years of<br>Experience</p>
+        </div>
+      </div>
+      <!-- Card 4 -->
+      <div class="col-6 col-md-3">
+        <div class="counter-box p-4 bg-black rounded-3">
+          <h3 class="counter text-orange" data-target="100">0%</h3>
+          <p>Comprehensive<br>Solutions</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Counter JavaScript -->
+<script>
+  const counters = document.querySelectorAll('.counter');
+  const speed = 150; // lower = faster
+
+  counters.forEach(counter => {
+    const animate = () => {
+      const target = +counter.getAttribute('data-target');
+      const count = +counter.innerText.replace(/\D/g, '');
+
+      const inc = Math.ceil(target / speed);
+
+      if (count < target) {
+        counter.innerText = count + inc + (target >= 1000 ? '+' : (target === 100 ? '%' : '+'));
+        setTimeout(animate, 30);
+      } else {
+        counter.innerText = target + (target >= 1000 ? '+' : (target === 100 ? '%' : '+'));
+      }
+    };
+
+    animate();
+  });
+</script>
+
+<!-- Extra CSS Styling (add to <style> in <head>) -->
+<style>
+  .text-orange {
+    color: orange;
+    font-weight: bold;
+  }
+
+  .counter-box {
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .counter {
+    font-size: 2rem;
+  }
+</style>
+
+
+
+
+
+
+<!-- Let Our References Speak For Us Section -->
+<section class="py-5 bg-dark text-white">
+  <div class="container">
+    <h2 class="text-center text-warning mb-4">Let Our References Speak for Us</h2>
+    <div class="row g-4">
+      <!-- Card 1 -->
+      <div class="col-md-4">
+        <div class="card bg-dark text-white h-100">
+          <img src="https://i0.wp.com/skilledmigrationservices.com.au/wp-content/uploads/2024/11/SMS-workers-2-1.jpg?resize=1024%2C768&ssl=1" class="card-img-top" alt="Jhoniel and David">
+          <div class="card-body">
+            <h5 class="card-title text-orange">Welcome to Melbourne, Australia</h5>
+            <p class="card-text">
+              We are thrilled to extend a heartfelt welcome to Jhoniel and David as they embark on this exciting journey in Australia! Your skills and talents are a valuable addition to our community.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Card 2 -->
+      <div class="col-md-4">
+        <div class="card bg-dark text-white h-100">
+          <img src="https://i0.wp.com/skilledmigrationservices.com.au/wp-content/uploads/2024/11/SMS-workers-2-1.jpg?resize=1024%2C768&ssl=1" class="card-img-top" alt="Kenneth and Carmelo">
+          <div class="card-body">
+            <h5 class="card-title text-orange">Welcome to Melbourne, Australia</h5>
+            <p class="card-text">
+              We are delighted to welcome Kenneth and Carmelo to our vibrant city of Melbourne! We wish you a blessed journey filled with exciting opportunities, new friendships, and unforgettable memories.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Card 3 -->
+      <div class="col-md-4">
+        <div class="card bg-dark text-white h-100">
+          <img src="https://i0.wp.com/skilledmigrationservices.com.au/wp-content/uploads/2024/11/SMS-workers-2-1.jpg?resize=1024%2C768&ssl=1" class="card-img-top" alt="Skilled Crew">
+          <div class="card-body">
+            <h5 class="card-title text-orange">Celebrating Our Skilled Crew! Australia</h5>
+            <p class="card-text">
+              A big shout out to some of our exceptional welders, painters, and electricians from one of our valued clients. Your hard work and dedication are deeply appreciated!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Add to <style> in <head> -->
+<style>
+  .text-orange {
+    color: orange;
+    font-weight: bold;
+  }
+</style>
+
+
+<section class="py-5 m-5 text-center">
+  <div class="container">
+    <h2 class="fw-bold mb-3">Get in touch with our team.</h2>
+    <p class="lead mb-4">
+      Whether you’re seeking a new life in Australia or growing your business with global talent, get expert guidance –
+      <strong>book a free consultation now</strong> and let our migration specialists pave the way.
+    </p>
+    <div class="d-flex justify-content-center flex-wrap gap-3">
+      <a href="#services" class="btn btn-warning px-4 py-2">Our Services</a>
+      <a href="#contact" class="btn btn-outline-warning px-4 py-2">Contact Us</a>
+    </div>
+  </div>
+</section>
+
+<style>
+
+</style>
+
+
+
+
+  <footer>
+    &copy; 2025 Skilled Migration Services. All rights reserved.
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
