@@ -1,4 +1,3 @@
-<!-- services.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,95 +5,238 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Our Services | Skilled Migration Services</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
-  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <style>
+    :root {
+      --primary-blue: #1a4b8c;
+      --secondary-blue: #2d6ec4;
+      --light-blue: #e8f1fc;
+      --accent-orange: #ff8c42;
+      --dark-text: #333333;
+      --light-text: #666666;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #ffffff;
+      color: var(--dark-text);
+      line-height: 1.6;
+    }
+    
+    .navbar {
+      background-color: #ffffff !important;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      padding: 15px 0;
+    }
+    
+    .navbar-brand {
+      font-weight: 700;
+      color: var(--primary-blue) !important;
+      font-size: 1.5rem;
+    }
+    
+    .navbar .nav-link {
+      color: var(--dark-text) !important;
+      font-weight: 500;
+      padding: 0.5rem 1rem !important;
+      transition: color 0.3s ease;
+    }
+    
+    .navbar .nav-link:hover,
+    .navbar .nav-link.active {
+      color: var(--primary-blue) !important;
+    }
+    
+    .navbar .nav-link.active {
+      font-weight: 600;
+    }
+    
+    .btn-primary {
+      background-color: var(--primary-blue);
+      border-color: var(--primary-blue);
+      padding: 10px 25px;
+      font-weight: 600;
+      border-radius: 4px;
+    }
+    
+    .btn-primary:hover {
+      background-color: var(--secondary-blue);
+      border-color: var(--secondary-blue);
+    }
+    
+    .btn-outline-primary {
+      color: var(--primary-blue);
+      border-color: var(--primary-blue);
+      padding: 10px 25px;
+      font-weight: 600;
+      border-radius: 4px;
+    }
+    
+    .btn-outline-primary:hover {
+      background-color: var(--primary-blue);
+      color: white;
+    }
+    
+    .section-title {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--primary-blue);
+      margin-bottom: 1.5rem;
+      position: relative;
+    }
+    
+    .section-title:after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 60px;
+      height: 4px;
+      background-color: var(--accent-orange);
+    }
+    
+    .text-center .section-title:after {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    
+    .bg-light-custom {
+      background-color: var(--light-blue) !important;
+    }
+    
+    .service-card {
+      background-color: white;
+      border-radius: 8px;
+      padding: 30px;
+      height: 100%;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-top: 4px solid var(--primary-blue);
+    }
+    
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+    
+    .service-icon {
+      font-size: 2.5rem;
+      color: var(--primary-blue);
+      margin-bottom: 20px;
+    }
+    
+    .service-card h5 {
+      color: var(--primary-blue);
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+    
+    .counter-section {
+      background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+      color: white;
+      padding: 80px 0;
+    }
+    
+    .counter-box {
+      text-align: center;
+      padding: 20px;
+    }
+    
+    .counter {
+      font-size: 3rem;
+      font-weight: 700;
+      color: white;
+      margin-bottom: 10px;
+    }
+    
+    .counter-text {
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
+    
+    .testimonial-card {
+      background-color: white;
+      border-radius: 8px;
+      padding: 25px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+      height: 100%;
+    }
+    
+    .testimonial-img {
+      border-radius: 8px;
+      margin-bottom: 20px;
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    
+    .testimonial-title {
+      color: var(--primary-blue);
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+    
+    .cta-section {
+      background-color: var(--light-blue);
+      padding: 60px 0;
+      border-radius: 12px;
+    }
+    
+    footer {
+      background-color: var(--primary-blue);
+      color: white;
+      padding: 60px 0 30px;
+    }
+    
+    footer h5 {
+      color: white;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+    
+    footer a {
+      color: rgba(255, 255, 255, 0.8);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    
+    footer a:hover {
+      color: white;
+    }
+    
+    .footer-links {
+      list-style: none;
+      padding-left: 0;
+    }
+    
+    .footer-links li {
+      margin-bottom: 10px;
+    }
+    
+    .social-icon {
+      font-size: 1.2rem;
+      margin-right: 10px;
+    }
+    
+    @media (max-width: 768px) {
+      .section-title {
+        font-size: 1.8rem;
+      }
+      
+      .counter {
+        font-size: 2.5rem;
+      }
+    }
+  </style>
 </head>
 <body>
 
-  <style>
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #121212;
-    /* color: #f0f0f0; */
-  }
-
-  .navbar {
-    background-color: #1e1e1e !important;
-  }
-
-  .navbar .nav-link,
-  .navbar .navbar-brand {
-    color: #f0f0f0 !important;
-  }
-
-  .navbar .nav-link.active {
-    font-weight: bold;
-    color: #ffa500 !important;
-  }
-
-  .hero {
-    background: url('https://unsplash.com/photos/a-wooden-map-of-australia-on-a-white-wall-jBwG9ieJ2-g') center/cover no-repeat;
-    color: white;
-    text-align: center;
-    padding: 100px 20px;
-  }
-
-  section {
-    color: #e0e0e0;
-  }
-
-  .bg-light {
-    background-color: #1a1a1a !important;
-  }
-
-  .bg-white {
-    background-color: #1b1a1a !important;
-  }
-
-  .text-muted {
-    color: #bbbbbb !important;
-  }
-
-  .btn-primary,
-  .btn-outline-primary,
-  .btn-dark {
-    background-color: orange !important;
-    color: black !important;
-    border: none !important;
-  }
-
-  .btn-outline-primary:hover,
-  .btn-primary:hover {
-    background-color: #ffb84d !important;
-    color: black !important;
-  }
-
-  .shadow-sm {
-    box-shadow: 0 0 15px rgba(255, 165, 0, 0.2) !important;
-  }
-
-  .footer,
-  footer {
-    background-color: #111 !important;
-    color: #ccc !important;
-  }
-
-  footer a {
-    color: #ffa500 !important;
-  } 
-
-  .section-title {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    font-weight: bold;
-  }
-</style>
-
-
   <!-- Navbar -->
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+  <nav class="navbar navbar-expand-lg navbar-light sticky-top shadow-sm">
     <div class="container">
-      <a class="navbar-brand fw-bold" href="index.html">Skilled Migration</a>
+      <a class="navbar-brand" href="index.html">
+        <span class="text-primary">Skilled</span> Migration
+      </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
         data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
         aria-label="Toggle navigation">
@@ -105,372 +247,307 @@
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
           <li class="nav-item"><a class="nav-link active" href="services.html">Services</a></li>
-          <!-- <li class="nav-item"><a class="nav-link" href="assessment.html">Assessment</a></li> -->
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- Header -->
- 
+  <!-- Hero Section -->
+  <section class="py-5 bg-light-custom">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-10 text-center">
+          <h1 class="section-title">Our Services</h1>
+          <p class="lead mb-0">Comprehensive migration solutions tailored to your needs</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
- <style>
-    body {
-      background-color: #121212;
-      
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-
-    .section-title {
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-
-    .card {
-      background-color: #1e1e1e;
-      border: none;
-      transition: transform 0.3s ease;
-      height: 100%;
-    }
-
-    .card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 0 15px rgba(255, 165, 0, 0.3);
-    }
-
-    .card-title {
-      color: orange;
-      font-weight: bold;
-    }
-
-    .card-text{
-        color: white;
-    }
-
-    .btn-orange {
-      background-color: orange;
-      color: black;
-      font-weight: bold;
-    }
-
-    .btn-orange:hover {
-      background-color: #ffaa00;
-      color: #000;
-    }
-
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background-color: #0d0d0d;
-      color: #aaa;
-      margin-top: 3rem;
-    }
-  </style>
-
-
-  <div class="container py-5">
-    <h1 class="section-title text-warning">Our Services</h1>
-    <div class="row g-4">
-      <!-- Service 1 -->
-      <div class="col-md-6 col-lg-4">
-        <div class="card p-3">
-          <div class="card-body">
-            <h5 class="card-title">Migration Services</h5>
-            <p class="card-text">
+  <!-- Services Section -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row g-4">
+        <!-- Service 1 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="service-card">
+            <i class="bi bi-passport service-icon"></i>
+            <h5>Migration Services</h5>
+            <p>
               We provide professional assistance with Australian visas including skilled migration, partner, parent, student and more.
             </p>
-            <!-- <a href="#" class="btn btn-orange">Learn More</a> -->
           </div>
         </div>
-      </div>
-      <!-- Service 2 -->
-      <div class="col-md-6 col-lg-4">
-        <div class="card p-3">
-          <div class="card-body">
-            <h5 class="card-title">Skill Assessment</h5>
-            <p class="card-text">
+        <!-- Service 2 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="service-card">
+            <i class="bi bi-clipboard-check service-icon"></i>
+            <h5>Skill Assessment</h5>
+            <p>
               Get guidance and help to complete your skill assessment with authorized assessing bodies for migration.
             </p>
-            <!-- <a href="#" class="btn btn-orange">Learn More</a> -->
           </div>
         </div>
-      </div>
-      <!-- Service 3 -->
-      <div class="col-md-6 col-lg-4">
-        <div class="card p-3">
-          <div class="card-body">
-            <h5 class="card-title">Student Visa Support</h5>
-            <p class="card-text">
+        <!-- Service 3 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="service-card">
+            <i class="bi bi-mortarboard service-icon"></i>
+            <h5>Student Visa Support</h5>
+            <p>
               Comprehensive support for obtaining your student visa, school enrollment, and compliance assistance.
             </p>
-            <!-- <a href="#" class="btn btn-orange">Learn More</a> -->
           </div>
         </div>
-      </div>
-      <!-- Service 4 -->
-      <div class="col-md-6 col-lg-4">
-        <div class="card p-3">
-          <div class="card-body">
-            <h5 class="card-title">Partner & Family Visas</h5>
-            <p class="card-text">
+        <!-- Service 4 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="service-card">
+            <i class="bi bi-people service-icon"></i>
+            <h5>Partner & Family Visas</h5>
+            <p>
               We help bring your loved ones to Australia through partner, spouse, and parent visa services.
             </p>
-            <!-- <a href="#" class="btn btn-orange">Learn More</a> -->
           </div>
         </div>
-      </div>
-      <!-- Service 5 -->
-      <div class="col-md-6 col-lg-4">
-        <div class="card p-3">
-          <div class="card-body">
-            <h5 class="card-title">Visa Refusals & Appeals</h5>
-            <p class="card-text">
+        <!-- Service 5 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="service-card">
+            <i class="bi bi-shield-exclamation service-icon"></i>
+            <h5>Visa Refusals & Appeals</h5>
+            <p>
               Facing a visa refusal or cancellation? We can help you appeal or reapply with the correct legal support.
             </p>
-            <!-- <a href="#" class="btn btn-orange">Learn More</a> -->
           </div>
         </div>
-      </div>
-      <!-- Service 6 -->
-      <div class="col-md-6 col-lg-4">
-        <div class="card p-3">
-          <div class="card-body">
-            <h5 class="card-title">Business & Investor Visas</h5>
-            <p class="card-text">
+        <!-- Service 6 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="service-card">
+            <i class="bi bi-briefcase service-icon"></i>
+            <h5>Business & Investor Visas</h5>
+            <p>
               Support for business owners and investors seeking permanent residency through investment pathways.
             </p>
-            <!-- <a href="#" class="btn btn-orange">Learn More</a> -->
           </div>
         </div>
       </div>
     </div>
-  </div>
-
-
+  </section>
 
   <!-- Why Choose Us Section -->
-<section class="py-5 bg-dark text-white">
-  <div class="container text-center">
-    <h2 class="mb-4 text-warning">Why You Should Choose Us</h2>
-    <div class="row g-4 justify-content-center">
-      <!-- Card 1 -->
-      <div class="col-6 col-md-3">
-        <div class="counter-box p-4 bg-black rounded-3">
-          <h3 class="counter text-orange" data-target="2000">0</h3>
-          <p>Thousands of<br>Successful Applications</p>
+  <section class="counter-section">
+    <div class="container">
+      <h2 class="section-title text-center text-white">Why You Should Choose Us</h2>
+      <div class="row g-4 justify-content-center">
+        <!-- Card 1 -->
+        <div class="col-6 col-md-3">
+          <div class="counter-box">
+            <div class="counter" data-target="2000">0</div>
+            <p class="counter-text">Thousands of Successful Applications</p>
+          </div>
         </div>
-      </div>
-      <!-- Card 2 -->
-      <div class="col-6 col-md-3">
-        <div class="counter-box p-4 bg-black rounded-3">
-          <h3 class="counter text-orange" data-target="100">0%</h3>
-          <p>Personalised<br>Support</p>
+        <!-- Card 2 -->
+        <div class="col-6 col-md-3">
+          <div class="counter-box">
+            <div class="counter" data-target="100">0%</div>
+            <p class="counter-text">Personalised Support</p>
+          </div>
         </div>
-      </div>
-      <!-- Card 3 -->
-      <div class="col-6 col-md-3">
-        <div class="counter-box p-4 bg-black rounded-3">
-          <h3 class="counter text-orange" data-target="17">0+</h3>
-          <p>Years of<br>Experience</p>
+        <!-- Card 3 -->
+        <div class="col-6 col-md-3">
+          <div class="counter-box">
+            <div class="counter" data-target="17">0+</div>
+            <p class="counter-text">Years of Experience</p>
+          </div>
         </div>
-      </div>
-      <!-- Card 4 -->
-      <div class="col-6 col-md-3">
-        <div class="counter-box p-4 bg-black rounded-3">
-          <h3 class="counter text-orange" data-target="100">0%</h3>
-          <p>Comprehensive<br>Solutions</p>
+        <!-- Card 4 -->
+        <div class="col-6 col-md-3">
+          <div class="counter-box">
+            <div class="counter" data-target="100">0%</div>
+            <p class="counter-text">Comprehensive Solutions</p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Counter JavaScript -->
-<script>
-  const counters = document.querySelectorAll('.counter');
-  const speed = 150; // lower = faster
-
-  counters.forEach(counter => {
-    const animate = () => {
-      const target = +counter.getAttribute('data-target');
-      const count = +counter.innerText.replace(/\D/g, '');
-
-      const inc = Math.ceil(target / speed);
-
-      if (count < target) {
-        counter.innerText = count + inc + (target >= 1000 ? '+' : (target === 100 ? '%' : '+'));
-        setTimeout(animate, 30);
-      } else {
-        counter.innerText = target + (target >= 1000 ? '+' : (target === 100 ? '%' : '+'));
-      }
-    };
-
-    animate();
-  });
-</script>
-
-<!-- Extra CSS Styling (add to <style> in <head>) -->
-<style>
-  .text-orange {
-    color: orange;
-    font-weight: bold;
-  }
-
-  .counter-box {
-    min-height: 150px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .counter {
-    font-size: 2rem;
-  }
-</style>
-
-
-
-
-
-
-<!-- Let Our References Speak For Us Section -->
-<section class="py-5 bg-dark text-white">
-  <div class="container">
-    <h2 class="text-center text-warning mb-4">Let Our References Speak for Us</h2>
-    <div class="row g-4">
-      <!-- Card 1 -->
-      <div class="col-md-4">
-        <div class="card bg-dark text-white h-100">
-          <img src="https://i0.wp.com/skilledmigrationservices.com.au/wp-content/uploads/2024/11/SMS-workers-2-1.jpg?resize=1024%2C768&ssl=1" class="card-img-top" alt="Jhoniel and David">
-          <div class="card-body">
-            <h5 class="card-title text-orange">Welcome to Melbourne, Australia</h5>
-            <p class="card-text">
+  <!-- Testimonials Section -->
+  <section class="py-5">
+    <div class="container">
+      <h2 class="section-title text-center mb-5">Let Our References Speak for Us</h2>
+      <div class="row g-4">
+        <!-- Testimonial 1 -->
+        <div class="col-md-4">
+          <div class="testimonial-card">
+            <img src="https://i0.wp.com/skilledmigrationservices.com.au/wp-content/uploads/2024/11/SMS-workers-2-1.jpg?resize=1024%2C768&ssl=1" alt="Jhoniel and David" class="testimonial-img">
+            <h5 class="testimonial-title">Welcome to Melbourne, Australia</h5>
+            <p>
               We are thrilled to extend a heartfelt welcome to Jhoniel and David as they embark on this exciting journey in Australia! Your skills and talents are a valuable addition to our community.
             </p>
           </div>
         </div>
-      </div>
-      <!-- Card 2 -->
-      <div class="col-md-4">
-        <div class="card bg-dark text-white h-100">
-          <img src="https://i0.wp.com/skilledmigrationservices.com.au/wp-content/uploads/2024/11/SMS-workers-2-1.jpg?resize=1024%2C768&ssl=1" class="card-img-top" alt="Kenneth and Carmelo">
-          <div class="card-body">
-            <h5 class="card-title text-orange">Welcome to Melbourne, Australia</h5>
-            <p class="card-text">
+        <!-- Testimonial 2 -->
+        <div class="col-md-4">
+          <div class="testimonial-card">
+            <img src="https://i0.wp.com/skilledmigrationservices.com.au/wp-content/uploads/2024/11/SMS-workers-2-1.jpg?resize=1024%2C768&ssl=1" alt="Kenneth and Carmelo" class="testimonial-img">
+            <h5 class="testimonial-title">Welcome to Melbourne, Australia</h5>
+            <p>
               We are delighted to welcome Kenneth and Carmelo to our vibrant city of Melbourne! We wish you a blessed journey filled with exciting opportunities, new friendships, and unforgettable memories.
             </p>
           </div>
         </div>
-      </div>
-      <!-- Card 3 -->
-      <div class="col-md-4">
-        <div class="card bg-dark text-white h-100">
-          <img src="https://i0.wp.com/skilledmigrationservices.com.au/wp-content/uploads/2024/11/SMS-workers-2-1.jpg?resize=1024%2C768&ssl=1" class="card-img-top" alt="Skilled Crew">
-          <div class="card-body">
-            <h5 class="card-title text-orange">Celebrating Our Skilled Crew! Australia</h5>
-            <p class="card-text">
+        <!-- Testimonial 3 -->
+        <div class="col-md-4">
+          <div class="testimonial-card">
+            <img src="https://i0.wp.com/skilledmigrationservices.com.au/wp-content/uploads/2024/11/SMS-workers-2-1.jpg?resize=1024%2C768&ssl=1" alt="Skilled Crew" class="testimonial-img">
+            <h5 class="testimonial-title">Celebrating Our Skilled Crew!</h5>
+            <p>
               A big shout out to some of our exceptional welders, painters, and electricians from one of our valued clients. Your hard work and dedication are deeply appreciated!
             </p>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Add to <style> in <head> -->
-<style>
-  .text-orange {
-    color: orange;
-    font-weight: bold;
-  }
-</style>
-
-
-<section class="py-5 m-5 text-center">
-  <div class="container">
-    <h2 class="fw-bold mb-3">Get in touch with our team.</h2>
-    <p class="lead mb-4">
-      Whether you’re seeking a new life in Australia or growing your business with global talent, get expert guidance –
-      <strong>book a free consultation now</strong> and let our migration specialists pave the way.
-    </p>
-    <div class="d-flex justify-content-center flex-wrap gap-3">
-      <a href="#services" class="btn btn-warning px-4 py-2">Our Services</a>
-      <a href="#contact" class="btn btn-outline-warning px-4 py-2">Contact Us</a>
+  <!-- CTA Section -->
+  <section class="py-5">
+    <div class="container">
+      <div class="cta-section text-center">
+        <h2 class="section-title">Get in touch with our team.</h2>
+        <p class="lead mb-4 mx-auto" style="max-width: 700px;">
+          Whether you're seeking a new life in Australia or growing your business with global talent, get expert guidance –
+          <strong>book a free consultation now</strong> and let our migration specialists pave the way.
+        </p>
+        <div class="d-flex justify-content-center flex-wrap gap-3">
+          <a href="#services" class="btn btn-primary px-4 py-2">Our Services</a>
+          <a href="#contact" class="btn btn-outline-primary px-4 py-2">Contact Us</a>
+        </div>
+      </div>
     </div>
-  </div>
-</section>
-
-<style>
-
-</style>
+  </section>
 
   <!-- Footer -->
-   <footer class="bg-dark text-light pt-5 pb-3">
-  <div class="container">
-    <div class="row g-4 justify-content-between text-center text-md-start">
+  <footer>
+    <div class="container">
+      <div class="row g-4 justify-content-between">
+        <!-- Brand and Mission -->
+        <div class="col-lg-4 mb-4">
+          <h5>SKILLED MIGRATION SERVICES</h5>
+          <p class="mt-3 pe-lg-4">
+            Join the thousands who have trusted Skilled Migration Services to turn their Australian dreams into reality.
+          </p>
+        </div>
 
-      <!-- Brand and Mission -->
-      <div class="col-md-4">
-        <h5 class="text-uppercase fw-bold text-warning">SKILLED MIGRATION SERVICES</h5>
-        <p class="mt-3 pe-md-4">
-          Join the thousands who have trusted Skilled Migration Services to turn their Australian dreams into reality.
-        </p>
-        <small class="d-block mt-4">© 2024 SKILLED MIGRATION SERVICES | 
-          <a href="#" class="text-decoration-underline text-light">Code Of Conduct</a>
-        </small>
+        <!-- Services Links -->
+        <div class="col-md-6 col-lg-2 mb-4">
+          <h6>Services</h6>
+          <ul class="footer-links mt-3">
+            <li><a href="#">Visa Application Service</a></li>
+            <li><a href="#">Business Migration Service</a></li>
+            <li><a href="#">Skilled Migration Service</a></li>
+            <li><a href="#">Recruitment and Talent Sourcing</a></li>
+          </ul>
+        </div>
+
+        <!-- Site Links -->
+        <div class="col-md-6 col-lg-2 mb-4">
+          <h6>Quick Links</h6>
+          <ul class="footer-links mt-3">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="col-lg-3 mb-4">
+          <h6>Get in touch</h6>
+          <ul class="footer-links mt-3">
+            <li class="mb-2">
+              <i class="bi bi-telephone-fill social-icon"></i>(03) 9467 1110
+            </li>
+            <li class="mb-2">
+              <i class="bi bi-envelope-fill social-icon"></i>
+              <a href="mailto:jc@skilledmigrationservices.com.au">
+                jc@skilledmigrationservices.com.au
+              </a>
+            </li>
+            <li class="mb-2">
+              <i class="bi bi-geo-alt-fill social-icon"></i>105/9 Ormond Blvd, Bundoora, VIC, Australia, 3083
+            </li>
+            <li class="mt-3">
+              <a href="#">
+                <i class="bi bi-linkedin social-icon"></i>LinkedIn
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
-
-      <!-- Services Links -->
-      <div class="col-md-2">
-        <h6 class="fw-bold text-warning">Services</h6>
-        <ul class="list-unstyled mt-3">
-          <li class="mb-2"><a href="#" class="text-light text-decoration-none">Visa Application Service</a></li>
-          <li class="mb-2"><a href="#" class="text-light text-decoration-none">Business Migration Service</a></li>
-          <li class="mb-2"><a href="#" class="text-light text-decoration-none">Skilled Migration Service</a></li>
-          <li><a href="#" class="text-light text-decoration-none">Recruitment and Talent Sourcing</a></li>
-        </ul>
+      
+      <div class="row mt-5 pt-4 border-top border-light">
+        <div class="col-md-12 text-center">
+          <small>© 2024 SKILLED MIGRATION SERVICES | 
+            <a href="#" class="text-decoration-underline">Code Of Conduct</a>
+          </small>
+        </div>
       </div>
-
-      <!-- Site Links -->
-      <div class="col-md-2">
-        <h6 class="fw-bold text-warning">Skilled Migration Services</h6>
-        <ul class="list-unstyled mt-3">
-          <li class="mb-2"><a href="#" class="text-light text-decoration-none">Home</a></li>
-          <li class="mb-2"><a href="#" class="text-light text-decoration-none">About Us</a></li>
-          <li class="mb-2"><a href="#" class="text-light text-decoration-none">Services</a></li>
-          <li><a href="#" class="text-light text-decoration-none">Contact Us</a></li>
-        </ul>
-      </div>
-
-      <!-- Contact Info -->
-      <div class="col-md-3">
-        <h6 class="fw-bold text-warning">Get in touch</h6>
-        <ul class="list-unstyled mt-3">
-          <li class="mb-2">
-            <i class="bi bi-telephone-fill me-2"></i>(03) 9467 1110
-          </li>
-          <li class="mb-2">
-            <i class="bi bi-envelope-fill me-2"></i>
-            <a href="mailto:jc@skilledmigrationservices.com.au" class="text-light text-decoration-none">
-              jc@skilledmigrationservices.com.au
-            </a>
-          </li>
-          <li class="mb-2">
-            <i class="bi bi-geo-alt-fill me-2"></i>105/9 Ormond Blvd, Bundoora, VIC, Australia, 3083
-          </li>
-          <li class="mt-3">
-            <a href="#" class="text-light text-decoration-none">
-              <i class="bi bi-linkedin me-2"></i>LinkedIn
-            </a>
-          </li>
-        </ul>
-      </div>
-
     </div>
-  </div>
-</footer>
+  </footer>
+
+  <!-- Counter JavaScript -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const counters = document.querySelectorAll('.counter');
+      const speed = 150; // lower = faster
+
+      counters.forEach(counter => {
+        const animate = () => {
+          const target = +counter.getAttribute('data-target');
+          let count = +counter.innerText.replace(/\D/g, '');
+          
+          // Handle percentage values
+          if (counter.innerText.includes('%')) {
+            count = +counter.innerText.replace('%', '');
+          }
+
+          const inc = Math.ceil(target / speed);
+
+          if (count < target) {
+            let newValue = count + inc;
+            if (target >= 1000) {
+              counter.innerText = newValue + '+';
+            } else if (target === 100) {
+              counter.innerText = newValue + '%';
+            } else {
+              counter.innerText = newValue + '+';
+            }
+            setTimeout(animate, 30);
+          } else {
+            if (target >= 1000) {
+              counter.innerText = target + '+';
+            } else if (target === 100) {
+              counter.innerText = target + '%';
+            } else {
+              counter.innerText = target + '+';
+            }
+          }
+        };
+
+        // Only animate when element is in viewport
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              animate();
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.5 });
+
+        observer.observe(counter);
+      });
+    });
+  </script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>

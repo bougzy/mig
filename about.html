@@ -1,4 +1,3 @@
-<!-- about.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,94 +5,178 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>About Us | Skilled Migration Services</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
-  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <style>
+    :root {
+      --primary-blue: #1a4b8c;
+      --secondary-blue: #2d6ec4;
+      --light-blue: #e8f1fc;
+      --accent-orange: #ff8c42;
+      --dark-text: #333333;
+      --light-text: #666666;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #ffffff;
+      color: var(--dark-text);
+      line-height: 1.6;
+    }
+    
+    .navbar {
+      background-color: #ffffff !important;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      padding: 15px 0;
+    }
+    
+    .navbar-brand {
+      font-weight: 700;
+      color: var(--primary-blue) !important;
+      font-size: 1.5rem;
+    }
+    
+    .navbar .nav-link {
+      color: var(--dark-text) !important;
+      font-weight: 500;
+      padding: 0.5rem 1rem !important;
+      transition: color 0.3s ease;
+    }
+    
+    .navbar .nav-link:hover,
+    .navbar .nav-link.active {
+      color: var(--primary-blue) !important;
+    }
+    
+    .navbar .nav-link.active {
+      font-weight: 600;
+    }
+    
+    .btn-primary {
+      background-color: var(--primary-blue);
+      border-color: var(--primary-blue);
+      padding: 10px 25px;
+      font-weight: 600;
+      border-radius: 4px;
+    }
+    
+    .btn-primary:hover {
+      background-color: var(--secondary-blue);
+      border-color: var(--secondary-blue);
+    }
+    
+    .section-title {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--primary-blue);
+      margin-bottom: 1.5rem;
+      position: relative;
+    }
+    
+    .section-title:after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 60px;
+      height: 4px;
+      background-color: var(--accent-orange);
+    }
+    
+    .text-center .section-title:after {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    
+    .bg-light-custom {
+      background-color: var(--light-blue) !important;
+    }
+    
+    .highlight-box {
+      background-color: white;
+      border-radius: 8px;
+      padding: 30px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      border-left: 4px solid var(--accent-orange);
+    }
+    
+    .hero-about {
+      background: linear-gradient(rgba(26, 75, 140, 0.9), rgba(26, 75, 140, 0.8)), url('https://i0.wp.com/skilledmigrationservices.com.au/wp-content/uploads/2024/11/Sydeny-Opera-house.jpg?resize=1024%2C483&ssl=1') center/cover no-repeat;
+      color: white;
+      padding: 100px 0;
+      text-align: center;
+    }
+    
+    .about-image {
+      border-radius: 8px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+    
+    .about-image:hover {
+      transform: scale(1.02);
+    }
+    
+    .mission-icon {
+      font-size: 2.5rem;
+      color: var(--primary-blue);
+      margin-bottom: 20px;
+    }
+    
+    footer {
+      background-color: var(--primary-blue);
+      color: white;
+      padding: 60px 0 30px;
+    }
+    
+    footer h5 {
+      color: white;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+    
+    footer a {
+      color: rgba(255, 255, 255, 0.8);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    
+    footer a:hover {
+      color: white;
+    }
+    
+    .footer-links {
+      list-style: none;
+      padding-left: 0;
+    }
+    
+    .footer-links li {
+      margin-bottom: 10px;
+    }
+    
+    .social-icon {
+      font-size: 1.2rem;
+      margin-right: 10px;
+    }
+    
+    @media (max-width: 768px) {
+      .section-title {
+        font-size: 1.8rem;
+      }
+      
+      .hero-about {
+        padding: 60px 0;
+      }
+    }
+  </style>
 </head>
 <body>
 
-
-  <style>
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #121212;
-    color: #f0f0f0;
-  }
-
-  .navbar {
-    background-color: #1e1e1e !important;
-  }
-
-  .navbar .nav-link,
-  .navbar .navbar-brand {
-    color: #f0f0f0 !important;
-  }
-
-  .navbar .nav-link.active {
-    font-weight: bold;
-    color: #ffa500 !important;
-  }
-
-  .hero {
-    background: url('https://unsplash.com/photos/a-wooden-map-of-australia-on-a-white-wall-jBwG9ieJ2-g') center/cover no-repeat;
-    color: white;
-    text-align: center;
-    padding: 100px 20px;
-  }
-
-  section {
-    color: #e0e0e0;
-  }
-
-  .bg-light {
-    background-color: #1a1a1a !important;
-  }
-
-  .bg-white {
-    background-color: #1b1a1a !important;
-  }
-
-  .text-muted {
-    color: #bbbbbb !important;
-  }
-
-  .btn-primary,
-  .btn-outline-primary,
-  .btn-dark {
-    background-color: orange !important;
-    color: black !important;
-    border: none !important;
-  }
-
-  .btn-outline-primary:hover,
-  .btn-primary:hover {
-    background-color: #ffb84d !important;
-    color: black !important;
-  }
-
-  .shadow-sm {
-    box-shadow: 0 0 15px rgba(255, 165, 0, 0.2) !important;
-  }
-
-  .footer,
-  footer {
-    background-color: #111 !important;
-    color: #ccc !important;
-  }
-
-  footer a {
-    color: #ffa500 !important;
-  } 
-
-  .section-title {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    font-weight: bold;
-  }
-</style>
-
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+  <nav class="navbar navbar-expand-lg navbar-light sticky-top shadow-sm">
     <div class="container">
-      <a class="navbar-brand fw-bold" href="index.html">Skilled Migration</a>
+      <a class="navbar-brand" href="index.html">
+        <span class="text-primary">Skilled</span> Migration
+      </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
         data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
         aria-label="Toggle navigation">
@@ -104,7 +187,6 @@
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
           <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-          <!-- <li class="nav-item"><a class="nav-link" href="assessment.html">Assessment</a></li> -->
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
         </ul>
       </div>
@@ -112,28 +194,29 @@
   </nav>
 
   <!-- Hero Section -->
-  <!-- <section class="py-5 bg-light text-white text-center">
+  <section class="hero-about">
     <div class="container">
-      <h1>About Us</h1>
-      <p class="lead">Trusted Australian Migration Experts</p>
+      <h1 class="display-4 fw-bold mb-3">About Us</h1>
+      <p class="lead fs-4">Trusted Australian Migration Experts Since 2007</p>
     </div>
-  </section> -->
+  </section>
 
   <!-- About Content -->
   <section class="py-5">
     <div class="container">
       <div class="row align-items-center">
-        <div class="col-md-6">
+        <div class="col-md-6 mb-4 mb-md-0">
           <img src="https://i0.wp.com/skilledmigrationservices.com.au/wp-content/uploads/2024/11/Sydeny-Opera-house.jpg?resize=1024%2C483&ssl=1"
-            alt="About Skilled Migration" class="img-fluid rounded">
+            alt="About Skilled Migration" class="img-fluid about-image">
         </div>
         <div class="col-md-6">
-          <h2>Who We Are</h2>
-          <p>
-            <span class="text-warning">Your Trusted Migration Partners:</span> Since 2007, Skilled Migration Services has pioneered expert migration solutions from our Melbourne headquarters and satellite offices across Asia. Our team of seasoned, registered migration agents and consultants boasts unparalleled expertise, honed through over 17 years of navigating Australia’s intricate immigration landscape.
+          <h2 class="section-title">Who We Are</h2>
+          <p class="mb-4">
+            <strong class="text-primary">Your Trusted Migration Partners:</strong> Since 2007, Skilled Migration Services has pioneered expert migration solutions from our Melbourne headquarters and satellite offices across Asia. Our team of seasoned, registered migration agents and consultants boasts unparalleled expertise, honed through over 17 years of navigating Australia's intricate immigration landscape.
           </p>
-          <p>
-           <sppan class="text-warning">Expert Guidance, Every Step:</sppan> We recognize that migration processes can overwhelm even the most prepared individuals. Our dedicated team: – Simplifies complex legal requirements – Stays abreast of frequent legislative updates – Provides continuous support from application preparation to post-submission updates – Ensures critical details meet stringent criteria within tight deadlines
+          <p class="mb-4">
+            <strong class="text-primary">Expert Guidance, Every Step:</strong> We recognize that migration processes can overwhelm even the most prepared individuals. Our dedicated team simplifies complex legal requirements and stays abreast of frequent legislative updates.
+          </p>
           <p>
             Whether you are applying for a Skilled Visa, Employer Sponsored Visa, or Family Visa,
             we ensure your application is prepared and submitted with the utmost accuracy.
@@ -144,88 +227,165 @@
   </section>
 
   <!-- Mission Section -->
-  <section class="py-5 bg-light">
+  <section class="py-5 bg-light-custom">
     <div class="container">
-      <p class="text-center fs-5 container">
-       <span class="text-warning fw-bold">Your Migration Goals, Achieved with Clarity and Confidence:</span> At Skilled Migration Services, our commitment extends beyond mere application submission. We strive to secure your Australian visa efficiently, effortlessly and cost-effectively, catering to various migration objectives: – Work – Study – Travel – Residence
-      </p>
-    </div>
-  </section>
-  <section class="py-5 bg-light">
-    <div class="container">
-      <p class="text-center fs-5 container">
-       <span class="text-warning fw-bold">What Sets Us Apart:</span>
-        Unparalleled expertise in Australian migration law – Proven track record of successful applications – Personalized support from registered migration agents – Strategic locations in Melbourne and Asia for global reach – Commitment to clarity, transparency, and peace of mind.
-      </p>
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="highlight-box text-center">
+            <i class="bi bi-bullseye mission-icon"></i>
+            <h3 class="mb-4">Your Migration Goals, Achieved with Clarity and Confidence</h3>
+            <p class="fs-5">
+              At Skilled Migration Services, our commitment extends beyond mere application submission. We strive to secure your Australian visa efficiently, effortlessly and cost-effectively, catering to various migration objectives: Work, Study, Travel, and Residence.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  
+  <!-- What Sets Us Apart Section -->
+  <section class="py-5">
+    <div class="container">
+      <h2 class="section-title text-center mb-5">What Sets Us Apart</h2>
+      <div class="row">
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="d-flex">
+            <div class="me-3">
+              <i class="bi bi-award-fill text-primary" style="font-size: 1.5rem;"></i>
+            </div>
+            <div>
+              <h5>Unparalleled Expertise</h5>
+              <p>Deep knowledge of Australian migration law with a proven track record of successful applications.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="d-flex">
+            <div class="me-3">
+              <i class="bi bi-person-check-fill text-primary" style="font-size: 1.5rem;"></i>
+            </div>
+            <div>
+              <h5>Personalized Support</h5>
+              <p>Dedicated guidance from registered migration agents tailored to your specific situation.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="d-flex">
+            <div class="me-3">
+              <i class="bi bi-geo-alt-fill text-primary" style="font-size: 1.5rem;"></i>
+            </div>
+            <div>
+              <h5>Global Reach</h5>
+              <p>Strategic locations in Melbourne and Asia to serve clients across the globe.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="d-flex">
+            <div class="me-3">
+              <i class="bi bi-shield-check-fill text-primary" style="font-size: 1.5rem;"></i>
+            </div>
+            <div>
+              <h5>Transparency</h5>
+              <p>Commitment to clarity and honesty throughout your migration journey.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="d-flex">
+            <div class="me-3">
+              <i class="bi bi-clock-fill text-primary" style="font-size: 1.5rem;"></i>
+            </div>
+            <div>
+              <h5>Continuous Support</h5>
+              <p>From application preparation to post-submission updates and beyond.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="d-flex">
+            <div class="me-3">
+              <i class="bi bi-check-circle-fill text-primary" style="font-size: 1.5rem;"></i>
+            </div>
+            <div>
+              <h5>Quality Assurance</h5>
+              <p>Ensuring critical details meet stringent criteria within tight deadlines.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Footer -->
-  <footer class="bg-dark text-light pt-5 pb-3">
-  <div class="container">
-    <div class="row g-4 justify-content-between text-center text-md-start">
+  <footer>
+    <div class="container">
+      <div class="row g-4 justify-content-between">
+        <!-- Brand and Mission -->
+        <div class="col-lg-4 mb-4">
+          <h5>SKILLED MIGRATION SERVICES</h5>
+          <p class="mt-3 pe-lg-4">
+            Join the thousands who have trusted Skilled Migration Services to turn their Australian dreams into reality.
+          </p>
+        </div>
 
-      <!-- Brand and Mission -->
-      <div class="col-md-4">
-        <h5 class="text-uppercase fw-bold text-warning">SKILLED MIGRATION SERVICES</h5>
-        <p class="mt-3 pe-md-4">
-          Join the thousands who have trusted Skilled Migration Services to turn their Australian dreams into reality.
-        </p>
-        <small class="d-block mt-4">© 2024 SKILLED MIGRATION SERVICES | 
-          <a href="#" class="text-decoration-underline text-light">Code Of Conduct</a>
-        </small>
+        <!-- Services Links -->
+        <div class="col-md-6 col-lg-2 mb-4">
+          <h6>Services</h6>
+          <ul class="footer-links mt-3">
+            <li><a href="#">Visa Application Service</a></li>
+            <li><a href="#">Business Migration Service</a></li>
+            <li><a href="#">Skilled Migration Service</a></li>
+            <li><a href="#">Recruitment and Talent Sourcing</a></li>
+          </ul>
+        </div>
+
+        <!-- Site Links -->
+        <div class="col-md-6 col-lg-2 mb-4">
+          <h6>Quick Links</h6>
+          <ul class="footer-links mt-3">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="col-lg-3 mb-4">
+          <h6>Get in touch</h6>
+          <ul class="footer-links mt-3">
+            <li class="mb-2">
+              <i class="bi bi-telephone-fill social-icon"></i>(03) 9467 1110
+            </li>
+            <li class="mb-2">
+              <i class="bi bi-envelope-fill social-icon"></i>
+              <a href="mailto:jc@skilledmigrationservices.com.au">
+                jc@skilledmigrationservices.com.au
+              </a>
+            </li>
+            <li class="mb-2">
+              <i class="bi bi-geo-alt-fill social-icon"></i>105/9 Ormond Blvd, Bundoora, VIC, Australia, 3083
+            </li>
+            <li class="mt-3">
+              <a href="#">
+                <i class="bi bi-linkedin social-icon"></i>LinkedIn
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
-
-      <!-- Services Links -->
-      <div class="col-md-2">
-        <h6 class="fw-bold text-warning">Services</h6>
-        <ul class="list-unstyled mt-3">
-          <li class="mb-2"><a href="#" class="text-light text-decoration-none">Visa Application Service</a></li>
-          <li class="mb-2"><a href="#" class="text-light text-decoration-none">Business Migration Service</a></li>
-          <li class="mb-2"><a href="#" class="text-light text-decoration-none">Skilled Migration Service</a></li>
-          <li><a href="#" class="text-light text-decoration-none">Recruitment and Talent Sourcing</a></li>
-        </ul>
+      
+      <div class="row mt-5 pt-4 border-top border-light">
+        <div class="col-md-12 text-center">
+          <small>© 2024 SKILLED MIGRATION SERVICES | 
+            <a href="#" class="text-decoration-underline">Code Of Conduct</a>
+          </small>
+        </div>
       </div>
-
-      <!-- Site Links -->
-      <div class="col-md-2">
-        <h6 class="fw-bold text-warning">Skilled Migration Services</h6>
-        <ul class="list-unstyled mt-3">
-          <li class="mb-2"><a href="#" class="text-light text-decoration-none">Home</a></li>
-          <li class="mb-2"><a href="#" class="text-light text-decoration-none">About Us</a></li>
-          <li class="mb-2"><a href="#" class="text-light text-decoration-none">Services</a></li>
-          <li><a href="#" class="text-light text-decoration-none">Contact Us</a></li>
-        </ul>
-      </div>
-
-      <!-- Contact Info -->
-      <div class="col-md-3">
-        <h6 class="fw-bold text-warning">Get in touch</h6>
-        <ul class="list-unstyled mt-3">
-          <li class="mb-2">
-            <i class="bi bi-telephone-fill me-2"></i>(03) 9467 1110
-          </li>
-          <li class="mb-2">
-            <i class="bi bi-envelope-fill me-2"></i>
-            <a href="mailto:jc@skilledmigrationservices.com.au" class="text-light text-decoration-none">
-              jc@skilledmigrationservices.com.au
-            </a>
-          </li>
-          <li class="mb-2">
-            <i class="bi bi-geo-alt-fill me-2"></i>105/9 Ormond Blvd, Bundoora, VIC, Australia, 3083
-          </li>
-          <li class="mt-3">
-            <a href="#" class="text-light text-decoration-none">
-              <i class="bi bi-linkedin me-2"></i>LinkedIn
-            </a>
-          </li>
-        </ul>
-      </div>
-
     </div>
-  </div>
-</footer>
+  </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>

@@ -5,95 +5,209 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contact Us | Skilled Migration Services</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
-  <link rel="stylesheet" href="style.css"/>
-
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
   <style>
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #121212;
-    color: #f0f0f0;
-  }
-
-  .navbar {
-    background-color: #1e1e1e !important;
-  }
-
-  .navbar .nav-link,
-  .navbar .navbar-brand {
-    color: #f0f0f0 !important;
-  }
-
-  .navbar .nav-link.active {
-    font-weight: bold;
-    color: #ffa500 !important;
-  }
-
-  .hero {
-    background: url('https://unsplash.com/photos/a-wooden-map-of-australia-on-a-white-wall-jBwG9ieJ2-g') center/cover no-repeat;
-    color: white;
-    text-align: center;
-    padding: 100px 20px;
-  }
-
-  section {
-    color: #e0e0e0;
-  }
-
-  .bg-light {
-    background-color: #1a1a1a !important;
-  }
-
-  .bg-white {
-    background-color: #1b1a1a !important;
-  }
-
-  .text-muted {
-    color: #bbbbbb !important;
-  }
-
-  .btn-primary,
-  .btn-outline-primary,
-  .btn-dark {
-    background-color: orange !important;
-    color: black !important;
-    border: none !important;
-  }
-
-  .btn-outline-primary:hover,
-  .btn-primary:hover {
-    background-color: #ffb84d !important;
-    color: black !important;
-  }
-
-  .shadow-sm {
-    box-shadow: 0 0 15px rgba(255, 165, 0, 0.2) !important;
-  }
-
-  .footer,
-  footer {
-    background-color: #111 !important;
-    color: #ccc !important;
-  }
-
-  footer a {
-    color: #ffa500 !important;
-  } 
-
-  .section-title {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    font-weight: bold;
-  }
-</style>
-
-
+    :root {
+      --primary-blue: #1a4b8c;
+      --secondary-blue: #2d6ec4;
+      --light-blue: #e8f1fc;
+      --accent-orange: #ff8c42;
+      --dark-text: #333333;
+      --light-text: #666666;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #ffffff;
+      color: var(--dark-text);
+      line-height: 1.6;
+    }
+    
+    .navbar {
+      background-color: #ffffff !important;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      padding: 15px 0;
+    }
+    
+    .navbar-brand {
+      font-weight: 700;
+      color: var(--primary-blue) !important;
+      font-size: 1.5rem;
+    }
+    
+    .navbar .nav-link {
+      color: var(--dark-text) !important;
+      font-weight: 500;
+      padding: 0.5rem 1rem !important;
+      transition: color 0.3s ease;
+    }
+    
+    .navbar .nav-link:hover,
+    .navbar .nav-link.active {
+      color: var(--primary-blue) !important;
+    }
+    
+    .navbar .nav-link.active {
+      font-weight: 600;
+    }
+    
+    .btn-primary {
+      background-color: var(--primary-blue);
+      border-color: var(--primary-blue);
+      padding: 12px 30px;
+      font-weight: 600;
+      border-radius: 4px;
+    }
+    
+    .btn-primary:hover {
+      background-color: var(--secondary-blue);
+      border-color: var(--secondary-blue);
+    }
+    
+    .section-title {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--primary-blue);
+      margin-bottom: 1.5rem;
+      position: relative;
+    }
+    
+    .section-title:after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 60px;
+      height: 4px;
+      background-color: var(--accent-orange);
+    }
+    
+    .text-center .section-title:after {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    
+    .bg-light-custom {
+      background-color: var(--light-blue) !important;
+    }
+    
+    .contact-hero {
+      background: linear-gradient(rgba(26, 75, 140, 0.9), rgba(26, 75, 140, 0.85)), url('https://images.unsplash.com/photo-1519501025264-65ba15a82390?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      color: white;
+      padding: 80px 0;
+      text-align: center;
+    }
+    
+    .contact-form {
+      background-color: white;
+      border-radius: 8px;
+      padding: 30px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    }
+    
+    .form-control {
+      padding: 12px 15px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+    }
+    
+    .form-control:focus {
+      border-color: var(--primary-blue);
+      box-shadow: 0 0 0 0.2rem rgba(26, 75, 140, 0.15);
+    }
+    
+    .contact-info-card {
+      background-color: white;
+      border-radius: 8px;
+      padding: 30px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+      height: 100%;
+    }
+    
+    .contact-icon {
+      font-size: 1.5rem;
+      color: var(--primary-blue);
+      margin-right: 15px;
+    }
+    
+    .contact-detail {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 25px;
+    }
+    
+    .map-container {
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    }
+    
+    footer {
+      background-color: var(--primary-blue);
+      color: white;
+      padding: 60px 0 30px;
+    }
+    
+    footer h5 {
+      color: white;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+    
+    footer a {
+      color: rgba(255, 255, 255, 0.8);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    
+    footer a:hover {
+      color: white;
+    }
+    
+    .footer-links {
+      list-style: none;
+      padding-left: 0;
+    }
+    
+    .footer-links li {
+      margin-bottom: 10px;
+    }
+    
+    .social-icon {
+      font-size: 1.2rem;
+      margin-right: 10px;
+    }
+    
+    @media (max-width: 768px) {
+      .section-title {
+        font-size: 1.8rem;
+      }
+      
+      .contact-hero {
+        padding: 60px 0;
+      }
+      
+      .contact-detail {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .contact-icon {
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
+    }
+  </style>
 </head>
 <body>
 
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+  <nav class="navbar navbar-expand-lg navbar-light sticky-top shadow-sm">
     <div class="container">
-      <a class="navbar-brand fw-bold" href="index.html">Skilled Migration</a>
+      <a class="navbar-brand" href="index.html">
+        <span class="text-primary">Skilled</span> Migration
+      </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
         data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
         aria-label="Toggle navigation">
@@ -104,7 +218,6 @@
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
           <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-          <!-- <li class="nav-item"><a class="nav-link" href="assessment.html">Assessment</a></li> -->
           <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
         </ul>
       </div>
@@ -112,142 +225,208 @@
   </nav>
 
   <!-- Hero Section -->
-  <!-- <section class="py-5 bg-primary text-white text-center">
+  <section class="contact-hero">
     <div class="container">
-      <h1>Contact Us</h1>
-      <p class="lead">We’re here to help you migrate to Australia the right way.</p>
+      <h1 class="display-4 fw-bold mb-3">Contact Us</h1>
+      <p class="lead fs-4">We're here to help you migrate to Australia the right way</p>
     </div>
-  </section> -->
+  </section>
 
-  <!-- Contact Form -->
+  <!-- Contact Form & Information -->
   <section class="py-5">
     <div class="container">
       <div class="row g-5">
         <!-- Form -->
-        <div class="col-md-6">
-          <h2>Send Us a Message</h2>
-          <form>
-            <div class="mb-3">
-              <label for="name" class="form-label">Full Name</label>
-              <input type="text" id="name" class="form-control" placeholder="Your full name" required>
-            </div>
-            <div class="mb-3">
-              <label for="email" class="form-label">Email Address</label>
-              <input type="email" id="email" class="form-control" placeholder="your@email.com" required>
-            </div>
-            <div class="mb-3">
-              <label for="subject" class="form-label">Subject</label>
-              <input type="text" id="subject" class="form-control" placeholder="Subject" required>
-            </div>
-            <div class="mb-3">
-              <label for="message" class="form-label">Message</label>
-              <textarea id="message" class="form-control" rows="5" placeholder="Write your message here..." required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Send Message</button>
-          </form>
+        <div class="col-lg-6">
+          <div class="contact-form">
+            <h2 class="section-title mb-4">Send Us a Message</h2>
+            <form>
+              <div class="mb-4">
+                <label for="name" class="form-label fw-semibold">Full Name</label>
+                <input type="text" id="name" class="form-control form-control-lg" placeholder="Your full name" required>
+              </div>
+              <div class="mb-4">
+                <label for="email" class="form-label fw-semibold">Email Address</label>
+                <input type="email" id="email" class="form-control form-control-lg" placeholder="your@email.com" required>
+              </div>
+              <div class="mb-4">
+                <label for="phone" class="form-label fw-semibold">Phone Number</label>
+                <input type="tel" id="phone" class="form-control form-control-lg" placeholder="Your phone number">
+              </div>
+              <div class="mb-4">
+                <label for="subject" class="form-label fw-semibold">Subject</label>
+                <select id="subject" class="form-select form-select-lg" required>
+                  <option value="" selected disabled>Select a subject</option>
+                  <option value="visa">Visa Inquiry</option>
+                  <option value="assessment">Skill Assessment</option>
+                  <option value="consultation">Free Consultation</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              <div class="mb-4">
+                <label for="message" class="form-label fw-semibold">Message</label>
+                <textarea id="message" class="form-control" rows="5" placeholder="Write your message here..." required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary w-100 py-3">Send Message</button>
+            </form>
+          </div>
         </div>
 
         <!-- Contact Details -->
-        <div class="col-md-6">
-          <h2>Our Contact Information</h2>
-          <ul class="list-unstyled">
-            <li class="mb-3">
-              <strong>Phone:</strong> <a href="tel:+61468411600">+61 468 411 600</a>
-            </li>
-            <li class="mb-3">
-              <strong>Email:</strong> <a href="mailto:info@skilledmigrationservices.com.au">info@skilledmigrationservices.com.au</a>
-            </li>
-            <li class="mb-3">
-              <strong>Address:</strong><br/>
-              Level 8/276 Flinders St,<br/>
-              Melbourne VIC 3000, Australia
-            </li>
-          </ul>
-          <h5>Working Hours</h5>
-          <p>Monday – Friday: 9:00 AM – 5:00 PM</p>
+        <div class="col-lg-6">
+          <div class="contact-info-card">
+            <h2 class="section-title mb-4">Our Contact Information</h2>
+            
+            <div class="contact-detail">
+              <div>
+                <i class="bi bi-telephone-fill contact-icon"></i>
+              </div>
+              <div>
+                <h5>Phone</h5>
+                <p class="mb-0"><a href="tel:+61468411600" class="text-decoration-none">+61 468 411 600</a></p>
+                <p class="mb-0"><a href="tel:+61394671110" class="text-decoration-none">(03) 9467 1110</a></p>
+              </div>
+            </div>
+            
+            <div class="contact-detail">
+              <div>
+                <i class="bi bi-envelope-fill contact-icon"></i>
+              </div>
+              <div>
+                <h5>Email</h5>
+                <p class="mb-0"><a href="mailto:info@skilledmigrationservices.com.au" class="text-decoration-none">info@skilledmigrationservices.com.au</a></p>
+                <p class="mb-0"><a href="mailto:jc@skilledmigrationservices.com.au" class="text-decoration-none">jc@skilledmigrationservices.com.au</a></p>
+              </div>
+            </div>
+            
+            <div class="contact-detail">
+              <div>
+                <i class="bi bi-geo-alt-fill contact-icon"></i>
+              </div>
+              <div>
+                <h5>Address</h5>
+                <p class="mb-0">Level 8/276 Flinders St,</p>
+                <p class="mb-0">Melbourne VIC 3000, Australia</p>
+              </div>
+            </div>
+            
+            <div class="contact-detail">
+              <div>
+                <i class="bi bi-clock-fill contact-icon"></i>
+              </div>
+              <div>
+                <h5>Working Hours</h5>
+                <p class="mb-0">Monday – Friday: 9:00 AM – 5:00 PM</p>
+                <p class="mb-0">Saturday: By appointment only</p>
+              </div>
+            </div>
+            
+            <div class="mt-4 pt-2">
+              <h5 class="mb-3">Follow Us</h5>
+              <div>
+                <a href="#" class="text-decoration-none me-3">
+                  <i class="bi bi-linkedin social-icon" style="font-size: 1.8rem;"></i>
+                </a>
+                <a href="#" class="text-decoration-none me-3">
+                  <i class="bi bi-facebook social-icon" style="font-size: 1.8rem;"></i>
+                </a>
+                <a href="#" class="text-decoration-none">
+                  <i class="bi bi-instagram social-icon" style="font-size: 1.8rem;"></i>
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Map -->
-  <section class="pb-5">
-    <div class="container w-50">
-      <h2 class="text-center mb-4">Find Us on Google Maps</h2>
-      <div class="ratio ratio-16x9">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.844212858601!2d144.9631578153528!3d-37.814107979751955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577aa31f207e8a3!2s276%20Flinders%20St%2C%20Melbourne%20VIC%203000%2C%20Australia!5e0!3m2!1sen!2sau!4v1614645161082!5m2!1sen!2sau"
-          style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  <section class="py-5 bg-light-custom">
+    <div class="container">
+      <h2 class="section-title text-center mb-5">Find Us on Google Maps</h2>
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="map-container">
+            <div class="ratio ratio-16x9">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.844212858601!2d144.9631578153528!3d-37.814107979751955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577aa31f207e8a3!2s276%20Flinders%20St%2C%20Melbourne%20VIC%203000%2C%20Australia!5e0!3m2!1sen!2sau!4v1614645161082!5m2!1sen!2sau"
+                style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  
   <!-- Footer -->
-  <footer class="bg-dark text-light pt-5 pb-3">
-  <div class="container">
-    <div class="row g-4 justify-content-between text-center text-md-start">
+  <footer>
+    <div class="container">
+      <div class="row g-4 justify-content-between">
+        <!-- Brand and Mission -->
+        <div class="col-lg-4 mb-4">
+          <h5>SKILLED MIGRATION SERVICES</h5>
+          <p class="mt-3 pe-lg-4">
+            Join the thousands who have trusted Skilled Migration Services to turn their Australian dreams into reality.
+          </p>
+        </div>
 
-      <!-- Brand and Mission -->
-      <div class="col-md-4">
-        <h5 class="text-uppercase fw-bold text-warning">SKILLED MIGRATION SERVICES</h5>
-        <p class="mt-3 pe-md-4">
-          Join the thousands who have trusted Skilled Migration Services to turn their Australian dreams into reality.
-        </p>
-        <small class="d-block mt-4">© 2024 SKILLED MIGRATION SERVICES | 
-          <a href="#" class="text-decoration-underline text-light">Code Of Conduct</a>
-        </small>
+        <!-- Services Links -->
+        <div class="col-md-6 col-lg-2 mb-4">
+          <h6>Services</h6>
+          <ul class="footer-links mt-3">
+            <li><a href="#">Visa Application Service</a></li>
+            <li><a href="#">Business Migration Service</a></li>
+            <li><a href="#">Skilled Migration Service</a></li>
+            <li><a href="#">Recruitment and Talent Sourcing</a></li>
+          </ul>
+        </div>
+
+        <!-- Site Links -->
+        <div class="col-md-6 col-lg-2 mb-4">
+          <h6>Quick Links</h6>
+          <ul class="footer-links mt-3">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="col-lg-3 mb-4">
+          <h6>Get in touch</h6>
+          <ul class="footer-links mt-3">
+            <li class="mb-2">
+              <i class="bi bi-telephone-fill social-icon"></i>(03) 9467 1110
+            </li>
+            <li class="mb-2">
+              <i class="bi bi-envelope-fill social-icon"></i>
+              <a href="mailto:jc@skilledmigrationservices.com.au">
+                jc@skilledmigrationservices.com.au
+              </a>
+            </li>
+            <li class="mb-2">
+              <i class="bi bi-geo-alt-fill social-icon"></i>105/9 Ormond Blvd, Bundoora, VIC, Australia, 3083
+            </li>
+            <li class="mt-3">
+              <a href="#">
+                <i class="bi bi-linkedin social-icon"></i>LinkedIn
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
-
-      <!-- Services Links -->
-      <div class="col-md-2">
-        <h6 class="fw-bold text-warning">Services</h6>
-        <ul class="list-unstyled mt-3">
-          <li class="mb-2"><a href="#" class="text-light text-decoration-none">Visa Application Service</a></li>
-          <li class="mb-2"><a href="#" class="text-light text-decoration-none">Business Migration Service</a></li>
-          <li class="mb-2"><a href="#" class="text-light text-decoration-none">Skilled Migration Service</a></li>
-          <li><a href="#" class="text-light text-decoration-none">Recruitment and Talent Sourcing</a></li>
-        </ul>
+      
+      <div class="row mt-5 pt-4 border-top border-light">
+        <div class="col-md-12 text-center">
+          <small>© 2024 SKILLED MIGRATION SERVICES | 
+            <a href="#" class="text-decoration-underline">Code Of Conduct</a>
+          </small>
+        </div>
       </div>
-
-      <!-- Site Links -->
-      <div class="col-md-2">
-        <h6 class="fw-bold text-warning">Skilled Migration Services</h6>
-        <ul class="list-unstyled mt-3">
-          <li class="mb-2"><a href="#" class="text-light text-decoration-none">Home</a></li>
-          <li class="mb-2"><a href="#" class="text-light text-decoration-none">About Us</a></li>
-          <li class="mb-2"><a href="#" class="text-light text-decoration-none">Services</a></li>
-          <li><a href="#" class="text-light text-decoration-none">Contact Us</a></li>
-        </ul>
-      </div>
-
-      <!-- Contact Info -->
-      <div class="col-md-3">
-        <h6 class="fw-bold text-warning">Get in touch</h6>
-        <ul class="list-unstyled mt-3">
-          <li class="mb-2">
-            <i class="bi bi-telephone-fill me-2"></i>(03) 9467 1110
-          </li>
-          <li class="mb-2">
-            <i class="bi bi-envelope-fill me-2"></i>
-            <a href="mailto:jc@skilledmigrationservices.com.au" class="text-light text-decoration-none">
-              jc@skilledmigrationservices.com.au
-            </a>
-          </li>
-          <li class="mb-2">
-            <i class="bi bi-geo-alt-fill me-2"></i>105/9 Ormond Blvd, Bundoora, VIC, Australia, 3083
-          </li>
-          <li class="mt-3">
-            <a href="#" class="text-light text-decoration-none">
-              <i class="bi bi-linkedin me-2"></i>LinkedIn
-            </a>
-          </li>
-        </ul>
-      </div>
-
     </div>
-  </div>
-</footer>
+  </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
